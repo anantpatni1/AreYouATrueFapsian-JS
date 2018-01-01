@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+			<title> Are you a true Fapsian?</title>
+			<link rel="stylesheet" type="text/css" href="style.css">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+		</head>
+
+	<body >
+		
+		<h1> Are you a true Fapsian?</h1>
+		<br>
+		<br>
+		<button onclick="location.href='game.html'" class="button" >Play</a></button>
+		<button class="button" onclick="instructions();" >Instructions</button>
+		<button class="button" onclick="window.open('http://www.facebook.com/dialog/feed?%20%20%20app_id=1182836865096506&%20%20%20picture=https://flic.kr/p/MRuM9F&%20%20%20name=Are%20you%20a%20true%20Fapsian?%20&%20%20%20description=Yes!%20I%20have%20passed%20all%2012%20stages%20and%20Im%20a%20true%20Fapsian!%20&caption=%20Download%20this%20game%20from%20PlayStore%20now!%20&%20%20%20redirect_uri=https%3A%2F%2Fwww.facebook.com&to&display=touch&_rdr')">About</button>
+		<div id="myModal" class="modal">
+
+			<div class="modal-content">
+				<div class="modal-header">
+				<h4>Instructions</h4>
+				</div>
+
+			<div class="modal-body">
+				<p>Modal</p>
+			</div>	
+			<div class="modal-footer">
+				<button class="button" onclick='retry()'; " >Click to Retry!</button>	
+			</div>
+			</div>
+		</div>
+
+	</body>
+
+	<script type="text/javascript">
+			
+		function instructions(){
+			var modal=document.getElementById('myModal');
+			modal.style.display = "block";
+
+
+		}
+
+		function about(){
+			var modal=document.getElementById('myModal');
+			modal.style.display = "block";
+
+
+		}
+
+
+
+	</script>
+
+	</html>
