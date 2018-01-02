@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+			<title> Are you a true Fapsian?</title>
+			<link rel="stylesheet" type="text/css" href="style.css">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+		</head>
+
+	<body onload="first();">
+		
+		<h1 id="h1"> Are you a true Fapsian?</h1>
+		<button class="button" id="b1">1</button>
+		<button class="button" id="b2">1</button>
+		<button class="button" id="b3">1</button>
+		<button class="button" id="b4">1</button>
+
+	<div id="myModal" class="modal">
+
+	<div class="modal-content">
+		<div class="modal-header">
+			<h2>Wrong Answer!</h2>
+		</div>
+		<div class="modal-footer">
+			<button class="button" onclick='retry()'; " >Click to Retry!</button>	
+		</div>
+	</div>
+	</div>
+	
+	</body>
+
+	<script type="text/javascript">
+
+		first();
+		function question(question,option) {
+			this.question=question;
+			this.option=option;
+		}
+		function finish2(finish,option) {
+			this.finish=finish;
+			this.option=option;
+		}
+
+
+		function first(){
+			document.getElementById('b3').style.display="flex";
+			document.getElementById('b4').style.display="flex";
+		var class1 = new question("How many branches of The Frank Anthony Public School are there in India?",["Four","Two","Three","One"]);
+			document.getElementById('h1').innerHTML=class1.question;
+			document.getElementById('b1').innerHTML=class1.option[0];
+			document.getElementById('b2').innerHTML=class1.option[1];
+			document.getElementById('b3').innerHTML=class1.option[2];
+			document.getElementById('b4').innerHTML=class1.option[3];
+			document.getElementById('b3').setAttribute('onclick',  "second()");
+			document.getElementById("b2").setAttribute('onclick',  "mod()");
+			document.getElementById("b1").setAttribute('onclick',  "mod()");
+			document.getElementById("b4").setAttribute('onclick',  "mod()");
+
+		}
+
+		function second(){
+		var class2 = new question("In which area is The Frank Anthony Public School, New Delhi located",["Lajpat Nagar","East of Kailash","Kalkaji","Okhla"]);
+			document.getElementById('h1').innerHTML=class2.question;
+			document.getElementById('b1').innerHTML=class2.option[0];
+			document.getElementById('b2').innerHTML=class2.option[1];
+			document.getElementById('b3').innerHTML=class2.option[2];
+			document.getElementById('b4').innerHTML=class2.option[3];
+			document.getElementById('b1').setAttribute('onclick',  "third()");
+			document.getElementById("b2").setAttribute('onclick',  "mod()");
+			document.getElementById("b3").setAttribute('onclick',  "mod()");
+			document.getElementById("b4").setAttribute('onclick',  "mod()");
+
+
+		}
+
+		function third(){
+		var class3 = new question("Which branch of FAPS was the first to be established in 1959?",["All in 1959","Bangalore","Kolkata","New Delhi"]);
+			document.getElementById('h1').innerHTML=class3.question;
+			document.getElementById('b1').innerHTML=class3.option[0];
+			document.getElementById('b2').innerHTML=class3.option[1];
+			document.getElementById('b3').innerHTML=class3.option[2];
+			document.getElementById('b4').innerHTML=class3.option[3];
+			document.getElementById('b4').setAttribute('onclick',  "fourth()");
+			document.getElementById("b1").setAttribute('onclick',  "mod()");
+			document.getElementById("b2").setAttribute('onclick',  "mod()");
+			document.getElementById("b3").setAttribute('onclick',  "mod()");
+
+		}
+
+
+		function fourth(){
+		var class4 = new question("Identify the person in the given picture.",["Mr.Stephen DaCosta","Mr. Albert Barrow","Mr.Frank Anthony","Mr. Neil O'Brien"]);
+			document.getElementById('h1').innerHTML=class4.question;
+			document.getElementById('b1').innerHTML=class4.option[0];
+			document.getElementById('b2').innerHTML=class4.option[1];
+			document.getElementById('b3').innerHTML=class4.option[2];
+			document.getElementById('b4').innerHTML=class4.option[3];
+			document.getElementById('b3').setAttribute('onclick',  "fifth()");
+			document.getElementById("b1").setAttribute('onclick',  "mod()");
+			document.getElementById("b2").setAttribute('onclick',  "mod()");
+			document.getElementById("b4").setAttribute('onclick',  "mod()");
+
+		}
+
+		function fifth(){
+		var class5 = new question("The Frank Anthony Public School is owned and administered by _____?",["Missionaries of Charity","Government of Delhi","Government of India","All India Anglo Assoc."]);
+			document.getElementById('h1').innerHTML=class5.question;
+			document.getElementById('b1').innerHTML=class5.option[0];
+			document.getElementById('b2').innerHTML=class5.option[1];
+			document.getElementById('b3').innerHTML=class5.option[2];
+			document.getElementById('b4').innerHTML=class5.option[3];
+			document.getElementById('b4').setAttribute('onclick',  "sixth()");
+			document.getElementById("b1").setAttribute('onclick',  "mod()");
+			document.getElementById("b2").setAttribute('onclick',  "mod()");
+			document.getElementById("b3").setAttribute('onclick',  "mod()");
+
+		}
+
+		function sixth(){
+		var class6 = new question("Which of these in not a house in FAPS(consider all three branches)",["Rodrigues","Ravenclaw","Gidney","Barrow"]);
+			document.getElementById('h1').innerHTML=class6.question;
+			document.getElementById('b1').innerHTML=class6.option[0];
+			document.getElementById('b2').innerHTML=class6.option[1];
+			document.getElementById('b3').innerHTML=class6.option[2];
+			document.getElementById('b4').innerHTML=class6.option[3];
+			document.getElementById('b2').setAttribute('onclick',  "seventh()");
+			document.getElementById("b1").setAttribute('onclick',  "mod()");
+			document.getElementById("b4").setAttribute('onclick',  "mod()");
+			document.getElementById("b3").setAttribute('onclick',  "mod()");
+
+		}
+
+		function seventh(){
+		var class7 = new question("Identify which branch of FAPS it is.",["None","Bangalore","Kolkata","New Delhi"]);
+			document.getElementById('h1').innerHTML=class7.question;
+			document.getElementById('b1').innerHTML=class7.option[0];
+			document.getElementById('b2').innerHTML=class7.option[1];
+			document.getElementById('b3').innerHTML=class7.option[2];
+			document.getElementById('b4').innerHTML=class7.option[3];
+			document.getElementById('b3').setAttribute('onclick',  "eighth()");
+			document.getElementById("b1").setAttribute('onclick',  "mod()");
+			document.getElementById("b2").setAttribute('onclick',  "mod()");
+			document.getElementById("b4").setAttribute('onclick',  "mod()");
+
+		}	
+
+		function eighth(){
+		var class8 = new question("What is the motto of Barrow House(FAPS New Delhi)",["The impossible is possible","Promote Vires","By work and by faith","Courage is Destiny"]);
+			document.getElementById('h1').innerHTML=class8.question;
+			document.getElementById('b1').innerHTML=class8.option[0];
+			document.getElementById('b2').innerHTML=class8.option[1];
+			document.getElementById('b3').innerHTML=class8.option[2];
+			document.getElementById('b4').innerHTML=class8.option[3];
+			document.getElementById('b3').setAttribute('onclick',  "ninth()");
+			document.getElementById("b1").setAttribute('onclick',  "mod()");
+			document.getElementById("b2").setAttribute('onclick',  "mod()");
+			document.getElementById("b4").setAttribute('onclick',  "mod()");
+
+		}
+
+		function ninth(){
+		var class9 = new question("What is the annual inter school event organised by FAPS Bangalore known as?",["Converge","Extravaganza","Impressions","Expressions"]);
+			document.getElementById('h1').innerHTML=class9.question;
+			document.getElementById('b1').innerHTML=class9.option[0];
+			document.getElementById('b2').innerHTML=class9.option[1];
+			document.getElementById('b3').innerHTML=class9.option[2];
+			document.getElementById('b4').innerHTML=class9.option[3];
+			document.getElementById('b4').setAttribute('onclick',  "tenth()");
+			document.getElementById("b1").setAttribute('onclick',  "mod()");
+			document.getElementById("b2").setAttribute('onclick',  "mod()");
+			document.getElementById("b3").setAttribute('onclick',  "mod()");
+
+		}
+
+		function tenth(){
+		var class10 = new question("Which of the following is not an alumni of FAPS(all three branches)",["Kapil Dev","Kanan Gill","Lara Dutta","Pankaj Advani"]);
+			document.getElementById('h1').innerHTML=class10.question;
+			document.getElementById('b1').innerHTML=class10.option[0];
+			document.getElementById('b2').innerHTML=class10.option[1];
+			document.getElementById('b3').innerHTML=class10.option[2];
+			document.getElementById('b4').innerHTML=class10.option[3];
+			document.getElementById('b1').setAttribute('onclick',  "eleventh()");
+			document.getElementById("b4").setAttribute('onclick',  "mod()");
+			document.getElementById("b2").setAttribute('onclick',  "mod()");
+			document.getElementById("b3").setAttribute('onclick',  "mod()");
+
+		}
+
+		function eleventh(){
+		var class11 = new question("On what date is Founder's day celebrated in FAPS?",["18th May","15th December","25th September","25th October"]);
+			document.getElementById('h1').innerHTML=class11.question;
+			document.getElementById('b1').innerHTML=class11.option[0];
+			document.getElementById('b2').innerHTML=class11.option[1];
+			document.getElementById('b3').innerHTML=class11.option[2];
+			document.getElementById('b4').innerHTML=class11.option[3];
+			document.getElementById('b3').setAttribute('onclick',  "twelfth()");
+			document.getElementById("b1").setAttribute('onclick',  "mod()");
+			document.getElementById("b2").setAttribute('onclick',  "mod()");
+			document.getElementById("b4").setAttribute('onclick',  "mod()");
+
+		}
+
+		function twelfth(){
+		var class12 = new question("Who designed the architecture of FAPS Delhi?",["Mr.Khalifa","Mr.Heinz","Mr.Arnold","Mr.Frank Anthony"]);
+			document.getElementById('h1').innerHTML=class12.question;
+			document.getElementById('b1').innerHTML=class12.option[0];
+			document.getElementById('b2').innerHTML=class12.option[1];
+			document.getElementById('b3').innerHTML=class12.option[2];
+			document.getElementById('b4').innerHTML=class12.option[3];
+			document.getElementById('b2').setAttribute('onclick',  "finish()");
+			document.getElementById("b1").setAttribute('onclick',  "mod()");
+			document.getElementById("b2").setAttribute('onclick',  "mod()");
+			document.getElementById("b4").setAttribute('onclick',  "mod()");
+
+		}
+
+		function finish(){
+		var finish1 = new finish2("Congratulations! You are a true Fapsian! Click on the button below to share this on Facebook and exit the game",["Share and Exit","Retry"]);
+			document.getElementById('h1').innerHTML=finish1.finish;
+			document.getElementById('b1').innerHTML=finish1.option[0];
+			document.getElementById('b2').innerHTML=finish1.option[1];
+			document.getElementById('b3').style.display="none";
+			document.getElementById('b4').style.display="none";
+
+
+			document.getElementById('b2').setAttribute('onclick',  "first()");
+			
+			
+		}
+	
+		
+		function mod(){
+			
+			var modal=document.getElementById('myModal');
+			modal.style.display = "block";
+		}
+
+
+		function retry(){
+
+			document.getElementById('myModal').style.display="none";
+			first();
+
+		}
+
+		
+
+		
+	</script>
+
+	</html>
